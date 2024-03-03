@@ -1,13 +1,62 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:white;
+  background-color: black;
+  background-image: url("https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 200px;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.planet {
+  width: 125px;
+  height: auto;
+  z-index: 1; /* Nastavte z-index planet tak, aby byly před Sluncem */
+  margin: 10px;
+  cursor: pointer;
+
+  @media (max-width: 600px) {
+    width: 75px;
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    width: 100px;
+  }
+}
+
+.solar-system {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  position: absolute;
+  z-index: -1; /* Nastavte z-index Slunce tak, aby bylo v pozadí */
+}
+
+p {
+  text-align: center;
+  padding: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 20px;
+  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
